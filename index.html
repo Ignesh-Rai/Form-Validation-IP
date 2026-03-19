@@ -2,332 +2,232 @@
 <html>
 <head>
     <title>SPCET Admission Form</title>
-    <div class="logo-section" >
-            <img class="logo" src="College-logo.png" alt="logo">
+</head>
+<body>
+<header>
+    <div class="logo-section">
+        <img class="logo" src="College-logo.png">
+        <div>
             <h1 class="title">St.Peter's College of Engineering and Technology</h1>
+            <p class="sub-text">An Autonomous Institution | Approved by NAAC</p>
+        </div>
     </div>
     <h5 class="note">Welcome to SPCET</h5>
-</head>
+</header>
 
-<body>
+<form id="myForm" onsubmit="return validateForm(event)">
 
-<div class="container">
-  <h2>New Admission Form</h2>
-    <h2>Candidate Details</h2>
-  <form id="myForm" onsubmit="return validateForm(event)">
-    
+<div class="form-wrapper">
+    <div class="container">
+        <h2>Candidate Details</h2>
 
-    <label>Name</label>
-    <input type="text" id="name">
+        <label>Name</label>
+        <input type="text" id="name">
 
-    <label>Email:</label>
-    <input type="text" id="email">
+        <label>Email</label>
+        <input type="text" id="email">
 
-    <label>Mobile Number:</label>
-    <input type="text" id="mobile">
+        <label>Mobile</label>
+        <input type="text" id="mobile">
 
-    <label>Gender</label>
-    <select id="gender">
-        <option value="">Select Gender</option>
-        <option value="male">Male</option>
-        <option value="female">Female</option>
-        <option value="other">Other</option>
-    </select>
+        <label>Gender</label>
+        <select id="gender">
+            <option value="">Select Gender</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+        </select>
 
-    <label>School Name</label>
-    <input type="text" id="school">
+        <label>School</label>
+        <input type="text" id="school">
 
-    <label>12th Roll Number</label>
-    <input type="text" id="rollNum12">
+        <label>12th Roll No</label>
+        <input type="text" id="rollNum12">
 
-    <label>Marks Obtained in 12th</label>
-    <input type="number" id="marks12">
+        <label>12th Marks</label>
+        <input type="number" id="marks12">
 
-    <label>10th Roll Number</label>
-    <input type="text" id="rollNum10">
+        <label>10th Roll No</label>
+        <input type="text" id="rollNum10">
 
-    <label>Marks Obtained in 10th</label>
-    <input type="number" id="marks10">
-  </form>
+        <label>10th Marks</label>
+        <input type="number" id="marks10">
+    </div>
+
+    <div class="container">
+        <h2>Parents Details</h2>
+
+        <label>Father Name</label>
+        <input type="text" id="fatherName">
+
+        <label>Father Occupation</label>
+        <input type="text" id="fatherOccupation">
+
+        <label>Father Income</label>
+        <input type="number" id="fatherIncome">
+
+        <label>Father Mobile</label>
+        <input type="text" id="fatherMobile">
+
+        <label>Mother Name</label>
+        <input type="text" id="motherName">
+
+        <label>Mother Occupation</label>
+        <input type="text" id="motherOccupation">
+
+        <label>Mother Income</label>
+        <input type="number" id="motherIncome">
+
+        <label>Mother Mobile</label>
+        <input type="text" id="motherMobile">
+    </div>
+
 </div>
-<br>
-<div class="container">
-    <form id="myForm" onsubmit="return validateForm(event)">
-    <h2>Parents Details</h2>
 
-    <label>Father's Name</label>
-    <input type="text" id="fatherName">
+<div class="password-section">
+    <h2>Account Security</h2>
 
-    <label>Father's Occupation</label>
-    <input type="text" id="fatherOccupation">
-
-    <label>Father's Annual Income</label>
-    <input type="number" id="fatherIncome">
-
-    <label>Father's Mobile Number</label>
-    <input type="text" id="fatherMobile">
-
-    <label>Mother's Name</label>
-    <input type="text" id="motherName">
-
-    <label>Mother's Occupation</label>
-    <input type="text" id="motherOccupation">
-
-    <label>Mother's Annual Income</label>
-    <input type="number" id="motherIncome">
-
-    <label>Mother's Mobile Number</label>
-    <input type="text" id="motherMobile">
-
-    <label>Create Password:</label>
+    <label>Password</label>
     <input type="password" id="password">
 
-    <label>Confirm Password:</label>
+    <label>Confirm Password</label>
     <input type="password" id="confirmPassword">
 
     <input type="submit" value="Submit">
-  </form>
 </div>
+
+</form>
 
 <script>
 function validateForm(event) {
-    event.preventDefault(); 
+    event.preventDefault();
 
     let name = document.getElementById("name").value.trim();
     let email = document.getElementById("email").value.trim();
-    let password = document.getElementById("password").value;
-    let confirmpassword = document.getElementById("confirmPassword").value;
-    let mobilenumber = document.getElementById("mobile").value.trim();
+    let mobile = document.getElementById("mobile").value.trim();
     let gender = document.getElementById("gender").value;
     let school = document.getElementById("school").value.trim();
-    let rollNum12 = document.getElementById("rollNum12").value.trim();
-    let marks12 = document.getElementById("marks12").value.trim();
-    let rollNum10 = document.getElementById("rollNum10").value.trim();
-    let marks10 = document.getElementById("marks10").value.trim();
-    let fatherName = document.getElementById("fatherName").value.trim();
-    let fatherOccupation = document.getElementById("fatherOccupation").value.trim();
-    let fatherIncome = document.getElementById("fatherIncome").value.trim();
+    let marks12 = document.getElementById("marks12").value;
+    let marks10 = document.getElementById("marks10").value;
     let fatherMobile = document.getElementById("fatherMobile").value.trim();
-    let motherName = document.getElementById("motherName").value.trim();
-    let motherOccupation = document.getElementById("motherOccupation").value.trim();
-    let motherIncome = document.getElementById("motherIncome").value.trim();
     let motherMobile = document.getElementById("motherMobile").value.trim();
+    let password = document.getElementById("password").value;
+    let confirmPassword = document.getElementById("confirmPassword").value;
 
-    if (name === "") {
-        alert("Please enter your name!");
-        return false;
-    }
+    if (name === "") return alert("Enter name"), false;
 
-    if (email === "") {
-        alert("Please enter your email.");
-        return false;
-    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
+        return alert("Invalid email"), false;
 
-    if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) === false) {
-        alert("Please enter a valid email.");
-        return false;
-    }
+    if (!/^\d{10}$/.test(mobile))
+        return alert("Invalid mobile"), false;
 
-    if (password === "") {
-        alert("Please enter your password.");
-        return false;
-    }
+    if (gender === "")
+        return alert("Select gender"), false;
 
-    if (password.length < 6) {
-        alert("Password must be at least 6 characters long.");
-        return false;
-    }
+    if (school === "")
+        return alert("Enter school"), false;
 
-    if (confirmpassword === "") {
-        alert("Please confirm your password.");
-        return false;
-    }
+    if (marks12 === "" || marks12 > 600)
+        return alert("Invalid 12th marks"), false;
 
-    if (password !== confirmpassword) {
-        alert("Password doesn't match!");
-        return false;
-    }
+    if (marks10 === "" || marks10 > 500)
+        return alert("Invalid 10th marks"), false;
 
-    if (mobilenumber === "") {
-        alert("Please enter your mobile number.");
-        return false;
-    }
+    if (!/^\d{10}$/.test(fatherMobile) || !/^\d{10}$/.test(motherMobile))
+        return alert("Invalid parent mobile"), false;
 
-    if(gender === ""){
-        alert("Please select your gender.");
-        return false;
-    }
+    if (password.length < 6)
+        return alert("Password too short"), false;
 
-    if (!/^\d{10}$/.test(mobilenumber) || !/^\d{10}$/.test(fatherMobile) || !/^\d{10}$/.test(motherMobile)) {
-        alert("Please enter a valid 10-digit mobile number in the fields of Candidate, Father and Mother.");
-        return false;
-    }
+    if (password !== confirmPassword)
+        return alert("Passwords do not match"), false;
 
-    if (regnum === "") {
-        alert("Please enter your Register Number.");
-        return false;
-    }
-
-    if (school === "") {
-        alert("Please enter your School Name.");
-        return false;
-    }
-
-    if (rollNum12 === "") {
-        alert("Please enter your 12th Roll Number.");
-        return false;
-    }
-
-    if (marks12 === "") {
-        alert("Please enter your Marks Obtained in 12th.");
-        return false;
-    }
-
-    if (marks12>600) {
-        alert("Please enter valid marks for class 12 !");
-        return false;
-    }
-
-    if (rollNum10 === "") {
-        alert("Please enter your 10th Roll Number.");
-        return false;
-    }
-
-    if (marks10 === "") {
-        alert("Please enter your Marks Obtained in 10th!");
-        return false;
-    }
-
-    if (marks10>500){
-        alert("Please enter valid marks for Class 10 !")
-        return false;
-    }
-
-    if (fatherName === "") {
-        alert("Please enter your Father's Name.");
-        return false;
-    }
-
-    if (fatherOccupation === "") {
-        alert("Please enter your Father's Occupation.");
-        return false;
-    }
-
-    if (fatherIncome === "") {
-        alert("Please enter your Father's Annual Income.");
-        return false;
-    }
-
-    if (fatherMobile === "") {
-        alert("Please enter your Father's Mobile Number.");
-        return false;
-    }
-
-    if (motherName === "") {
-        alert("Please enter your Mother's Name.");
-        return false;
-    }
-
-    if (motherOccupation === "") {
-        alert("Please enter your Mother's Occupation.");
-        return false;
-    }
-
-    if (motherIncome === "") {
-        alert("Please enter your Mother's Annual Income.");
-        return false;
-    }
-
-    if (motherMobile === "") {
-        alert("Please enter your Mother's Mobile Number.");
-        return false;
-    }
-
-    else {
-        alert("Form submitted successfully!");
-        document.getElementById("myForm").reset();
-        return true;
-      }
+    alert("Form submitted successfully!");
+    document.getElementById("myForm").reset();
+    return true;
 }
 </script>
+
+</body>
 <style>
 body {
     font-family: Arial, sans-serif;
     background-color: #0f0010;
-    height: 100vh;
 }
+
 .logo-section {
-    display:flex;          
-    align-items:start;    
-    justify-content:center; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 20px;
-    border:double #ff47ea;           
+    border: double #ff47ea;
+    padding: 10px;
 }
-.title{
+
+.logo {
+    height: 100px;
+    width: 80px;
+}
+
+.title {
     color: #f0a4e7;
     text-align: center;
-    margin-top: 20px;
 }
-.note{
+
+.sub-text {
+    font-size: 12px;
     color: #f0a4e7;
     text-align: center;
-    
+    margin-top: -10px;
 }
-.logo{
-    margin-left: 0%;
-    height: 120px;
-    width: 100px;
+
+.note {
+    color: #f0a4e7;
+    text-align: center;
+}
+
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
 .container {
     background-color: #e9e3e6;
-    padding: 25px;
+    padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(59, 59, 59, 0.1);
-    width:500px;
-    text-align: start; 
-    margin-left: 33%;
-
+    width: 400px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
-#gender {
-    width: 100%;
+.password-section {
+    background-color: #e9e3e6;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    margin: 30px auto;
+    text-align: center;
+    border: 2px solid #ff47ea;
+}
+
+input, select {
+    width: 97%;
     padding: 8px;
-    margin-top: 5px;
-    margin-bottom: 15px;
+    margin: 6px 0 12px;
     border: 1px solid #ccc;
-    border-radius: 3px;
+    border-radius: 5px;
 }
 
 h2 {
     text-align: center;
-    margin-bottom: 20px;
     color: #3c0313;
 }
 
-label {
-    font-size: 14px;
-}
-
-input[type="text"],
-input[type="password"],
-input[type="number"]{
-    width: 98%;
-    padding: 8px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    margin-right: 15px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-}
-
 input[type="submit"] {
-    width: 100%;
-    padding: 8px;
     background-color: #34072f;
     color: white;
-    border: none;
-    border-radius: 7px;
     cursor: pointer;
 }
 
@@ -335,6 +235,4 @@ input[type="submit"]:hover {
     background-color: #1d6d0d;
 }
 </style>
-
-</body>
 </html>
